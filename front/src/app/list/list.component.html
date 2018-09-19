@@ -1,3 +1,17 @@
-<p>
-  list works!
-</p>
+<h2>Recetas</h2>
+<div>
+  <input placeholder="Find a recipe" type="text" [(ngModel)]="pattern">
+</div>
+<div class="content">
+  <div *ngFor="let recipe of recipes | filter:'title':pattern; let i = index" class="info">
+    <div class="recipe">
+      <h3>
+        {{recipe.title}}
+      </h3>
+      <img src="{{recipe.thumbnail}}" alt="">
+      <p>
+        {{recipe.ingredients}}
+      </p>
+    </div>
+  </div>
+</div>

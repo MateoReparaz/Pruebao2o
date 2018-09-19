@@ -8,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
+  recipes: Array<any>;
+  pattern;
+
   constructor(public apiService : ApiService) { }
 
   ngOnInit() {
-    this.apiService.getAll().subscribe(data => console.log(data))
+    this.apiService.getRecipes().subscribe(data => {
+      this.recipes = data;
+    })
   }
 
 }

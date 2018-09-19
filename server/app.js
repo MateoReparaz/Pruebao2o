@@ -6,6 +6,7 @@ const express = require("express");
 const favicon = require("serve-favicon");
 const logger = require("morgan");
 const path = require("path");
+const cors = require("cors");
 
 const app_name = require("./package.json").name;
 const debug = require("debug")(
@@ -13,6 +14,17 @@ const debug = require("debug")(
 );
 
 const app = express();
+
+//CORS
+var whitelist = ["http://localhost:4200"];
+var corsOptions = {
+  origin: function(origin, callback) {
+    var originIsWhitelisted = whitelist.indexOf(origin) !== -1;
+    callback(null, originIsWhitelisted);
+  },
+  credentials: true
+};
+app.use(cors(corsOptions));
 
 // Middleware Setup
 app.use(logger("dev"));

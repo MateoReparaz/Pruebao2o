@@ -11,7 +11,7 @@ module.exports = router;
 
 //CALL THE API FOR THE INFO
 
-router.get("/list/:name", (req, res, next) => {
+router.get("/list", (req, res, next) => {
   const apiOptions = {
     baseURL: "http://www.recipepuppy.com/api/",
     headers: { "cache-control": "no-cache" }

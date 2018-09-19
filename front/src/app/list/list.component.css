@@ -1,0 +1,21 @@
+img {
+  width: 100px;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.info {
+    width: 30%;
+    text-align: center;
+
+}
+.recipe {
+  width: 100%;
+  line-height: 2em;
+  margin-top: 40px;
+}
+
+p{
+    margin:0 20px;
+}
