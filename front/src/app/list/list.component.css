@@ -7,6 +7,9 @@ h1 {
   text-align: center;
   color: #293340; 
 }
+h3 {
+  margin: 0 10px;
+}
 
 img {
   width: 100px;
@@ -22,7 +25,6 @@ img {
 }
 .recipe {
   width: 80%;
-  line-height: 2em;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin: 0 auto;
@@ -69,14 +71,21 @@ p {
   .info {
     width: 100%;
   }
-  h3 {
-    margin: 0 10px;
-  }
+ 
   .content {
     flex-direction: column;
     justify-content: center;
   }
   .input-elevated{
     width: 250px;
+  }
+}
+@media (min-width: 475px) {
+  .recipe{
+    height:300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
   }
 }

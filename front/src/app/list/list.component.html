@@ -12,7 +12,8 @@
         <img *ngIf="recipe.thumbnail" src="{{recipe.thumbnail}}" alt="">
         <img *ngIf="!recipe.thumbnail" src="../../assets/images/no_thumb.jpg" alt="">
         <p>
-          {{recipe.ingredients}}
+          <b>Ingredients:</b> <br>
+          {{(recipe.ingredients.length>90)? (recipe.ingredients | slice:0:90)+'..':(recipe.ingredients) }}
         </p>
       </div>
     </a>
