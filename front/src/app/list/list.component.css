@@ -89,3 +89,8 @@ p {
     justify-content: space-around;
   }
 }
+@media (max-width: 769px) {
+  .info{
+    width: 40%;
+  }
+}
