@@ -27,7 +27,6 @@ router.get("/list", (req, res, next) => {
         recipes = [...recipes, ...value[i].data.results];
       }
       res.json(recipes);
-      console.log(recipes);
     })
     .catch(error => res.json(error));
 });
