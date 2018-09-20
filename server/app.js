@@ -43,12 +43,14 @@ app.use(
 );
 
 app.use(express.static(path.join(__dirname, "public")));
-app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 
 // default value for title local
 app.locals.title = "Express - Generated with IronGenerator";
 
 const index = require("./routes/index");
 app.use("/", index);
+
+app.use((req,res) => res.sendFile(__dirname+'/public/index.html'))
 
 module.exports = app;
