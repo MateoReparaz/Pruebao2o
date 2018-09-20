@@ -1,17 +1,19 @@
 <h1>Find your recipes!</h1>
 <div class="search">
-  <input placeholder="Find a recipe" type="text" [(ngModel)]="pattern">
+  <input placeholder="Find a recipe (min 3 letters)" type="text" [(ngModel)]="pattern" class="input-elevated">
 </div>
 <div class="content">
   <div *ngFor="let recipe of recipes | filter:'title':pattern; let i = index" class="info">
-    <div class="recipe">
-      <h3>
-        {{recipe.title}}
-      </h3>
-      <img src="{{recipe.thumbnail}}" alt="">
-      <p>
-        {{recipe.ingredients}}
-      </p>
-    </div>
+    <a href="{{recipe.href}}" target="blank">
+      <div class="recipe">
+        <h3>
+          {{recipe.title}}
+        </h3>
+        <img src="{{recipe.thumbnail}}" alt="">
+        <p>
+          {{recipe.ingredients}}
+        </p>
+      </div>
+    </a>
   </div>
 </div>
