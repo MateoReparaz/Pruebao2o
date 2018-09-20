@@ -9,7 +9,8 @@
         <h3>
           {{recipe.title}}
         </h3>
-        <img src="{{recipe.thumbnail}}" alt="">
+        <img *ngIf="recipe.thumbnail" src="{{recipe.thumbnail}}" alt="">
+        <img *ngIf="!recipe.thumbnail" src="../../assets/images/no_thumb.jpg" alt="">
         <p>
           {{recipe.ingredients}}
         </p>
