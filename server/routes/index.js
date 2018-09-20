@@ -17,7 +17,7 @@ router.get("/list", (req, res, next) => {
   };
   let recipes = [];
   let prom = [];
-  for (let i = 1; i <= 100; i++) {
+  for (let i = 1; i <= 2; i++) {
     prom.push(axios.get(`?p=${i}`, apiOptions));
   }
   Promise.all(prom)
